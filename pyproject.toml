@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dbt-demo-healthcare"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "dbt_demo_healthcare"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+ydata-profiling = "^4.2.0"
+jupyterlab = "^4.0.1"
+pandas-gbq = "^0.19.2"
+ipywidgets = "^8.0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
