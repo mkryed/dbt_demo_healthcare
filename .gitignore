@@ -1,5 +1,14 @@
-
+# dbt
 target/
-dbt_packages/
+dbt_modules/
 logs/
+dbt_packages/
+
+# virtual env
+venv/
+env/
+dbt-env/
+.dbtenv/
+
+# mac
 .DS_Store
