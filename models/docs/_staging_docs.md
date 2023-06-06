@@ -28,10 +28,10 @@ Foreign key that connects to conditions table
 Foreign key that connects to procedures table
 {% enddocs %}
 
-{% docs encounters_start_date %}
+{% docs encounters_started_at %}
 The end datatime for each encounter record
 {% enddocs %}
 
-{% docs encounters_end_date %}
+{% docs encounters_ended_at %}
 The end datatime for each encounter record
 {% enddocs %}

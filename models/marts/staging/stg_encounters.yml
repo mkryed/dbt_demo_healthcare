@@ -16,7 +16,7 @@ models:
         description: '{{ doc("encounters_condition_id") }}'
       - name: procedure_id
         description: '{{ doc("encounters_procedure_id") }}'
-      - name: start_date
-        description: '{{ doc("encounters_start_date") }}'
-      - name: end_date
-        description: '{{ doc("encounters_end_date") }}'
+      - name: started_at
+        description: '{{ doc("encounters_started_at") }}'
+      - name: ended_at
+        description: '{{ doc("encounters_ended_at") }}'

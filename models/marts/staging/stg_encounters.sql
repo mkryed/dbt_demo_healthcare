@@ -14,8 +14,8 @@ final as (
         diagnosis[SAFE_OFFSET(0)].condition.procedureId as procedure_id,
 
         -- dates & timestamps
-        period.start as start_date,
-        period.end as end_date
+        period.start as started_at,
+        period.end as ended_at
 
     from src_encounters
 )
