@@ -1,6 +1,6 @@
 # Model-Level Descriptions
 {% docs stg_organizations %}
-Healthacre organization details
+Healthcare organization details
 {% enddocs %}
 
 #column- Level Descriptions
