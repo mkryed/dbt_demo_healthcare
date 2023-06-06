@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: demo_healthcare
+    database: datatonic-americas-demos
+    schema: fhir_synthea_raw
+    tables:
+      - name: claims_view
+        description:
+      - name: conditions_view
+
+      - name: encounters_view
+      - name: immunizations_raw
+      - name: medication_requests_raw
+      - name: organizations_view
+      - name: patients_view
+      - name: procedures_view
