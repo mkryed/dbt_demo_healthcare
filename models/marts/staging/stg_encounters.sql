@@ -1,4 +1,3 @@
-
 with src_encounters as (
     select * from {{ source('demo_healthcare', 'encounters_view')}}
 ),

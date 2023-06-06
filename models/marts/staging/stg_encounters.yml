@@ -1,22 +1,22 @@
 version: 2
 models:
   - name: stg_encounters
-    description: The hospitalized patient records
+    description: '{{ doc("stg_encounters") }}'
     columns:
       - name: encounters_id
-        description: Primary Key for encounters records
+        description: '{{ doc("encounters_id") }}'
         tests:
           - not_null
           - unique
       - name: patient_id
-        description: Foreign key that connects to patients table
+        description: '{{ doc("encounters_patient_id") }}'
       - name: organization_id
-        description: Foreign key that connects to organizations table
+        description: '{{ doc("encounters_organization_id") }}'
       - name: condition_id
-        description: Foreign key that connects to conditions table
+        description: '{{ doc("encounters_condition_id") }}'
       - name: procedure_id
-        description: Foreign key that connects to procedures table
+        description: '{{ doc("encounters_procedure_id") }}'
       - name: start_date
-        description: The beginning datatime for each encounter record
+        description: '{{ doc("encounters_start_date") }}'
       - name: end_date
-        description: The end datatime for each encounter record
+        description: '{{ doc("encounters_end_date") }}'
