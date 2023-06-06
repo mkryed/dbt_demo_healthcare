@@ -6,9 +6,7 @@ sources:
     schema: fhir_synthea_raw
     tables:
       - name: claims_view
-        description:
       - name: conditions_view
-
       - name: encounters_view
       - name: immunizations_view
       - name: medication_requests_view
