@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: stg_encounters
+    description: The hospitalized patient records
+    columns:
+      - name: encounters_id
+        description: Primary Key for encounters records
+        tests:
+          - not_null
+          - unique
+      - name: patient_id
+        description: Foreign key that connects to patients table
+      - name: organization_id
+        description: Foreign key that connects to organizations table
+      - name: condition_id
+        description: Foreign key that connects to conditions table
+      - name: procedure_id
+        description: Foreign key that connects to procedures table
+      - name: start_date
+        description: The beginning datatime for each encounter record
+      - name: end_date
+        description: The end datatime for each encounter record
