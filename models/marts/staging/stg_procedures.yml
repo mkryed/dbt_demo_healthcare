@@ -1,7 +1,7 @@
 models:
   - name: stg_procedures
     description: "{{ doc('stg_procedures') }}"
-  
+
     columns:
       - name: procedure_id
         description: "{{ doc('procedure_id') }}"
