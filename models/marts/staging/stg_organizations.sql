@@ -11,15 +11,13 @@ final as (
         id as organization_id,
         --strings
         name as organization_name,
-        type.text as organization_type,
-        address.line as organization_address,
-        address.city as organization_city,
-        address.state as organization_state,
-        address.country as organization_country,
-        address.postalcode as organization_postal_code
+        type[SAFE_OFFSET(0)].text as organization_type,
+        address[SAFE_OFFSET(0)].line as organization_address,
+        address[SAFE_OFFSET(0)].city as organization_city,
+        address[SAFE_OFFSET(0)].state as organization_state,
+        address[SAFE_OFFSET(0)].country as organization_country,
+        address[SAFE_OFFSET(0)].postalcode as organization_postal_code
     from organizations
-    cross join unnest(organizations.type) as type
-    cross join unnest(organizations.address) as address
 )
 
 select * from final
