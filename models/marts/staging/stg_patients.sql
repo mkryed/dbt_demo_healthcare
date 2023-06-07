@@ -11,7 +11,7 @@ final as (
         id as patient_id,
         gender as patient_gender,
         birthDate as patient_birth_date,
-        name[SAFE_OFFSET(0)].family as patient_last_name,
+        CONCAT('MASKED_', name[SAFE_OFFSET(0)].family) as patient_last_name,
         name[SAFE_OFFSET(0)].given as patient_first_name,
         name[SAFE_OFFSET(0)].use as name_in_use,
         deceased.dateTime as deceased_at,
@@ -22,6 +22,7 @@ final as (
         address[SAFE_OFFSET(0)].line as patient_address
     
     from src_patients
+    where name[SAFE_OFFSET(0)].use = 'official'
 
 )
 
