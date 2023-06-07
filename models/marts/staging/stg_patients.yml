@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_patients
+    description: "{{ doc('stg_patients')}}"
+    columns:
+      - name: patient_id
+        description: "{{ doc('patient_id')}}"
+        tests:
+          - unique
+          - not_null
+
+      - name: patient_gender
+        description: "{{ doc('patient_gender')}}"
+
+      - name: patient_birth_date
+        description: "{{ doc('patient_birth_date')}}"
+
+      - name: patient_last_name
+        description: "{{ doc('patient_last_name')}}"
+        meta: 
+            masking_policy: full_encrypt_pii  
+        meta: 
+            masking_policy: full_encrypt_pii 
+
+      - name: patient_first_name
+        description: "{{ doc('patient_first_name')}}"
+        meta: 
+            masking_policy: full_encrypt_pii 
+            
+      - name: name_in_use
+        description: "{{ doc('name_in_use')}}"
+
+      - name: deceased_at
+        description: "{{ doc('deceased_at')}}"
+
+      - name: patient_country
+        description: "{{ doc('patient_country')}}"
+        meta: 
+            masking_policy: full_encrypt_pii 
+
+      - name: patient_state
+        description: "{{ doc('patient_state')}}"
+        meta: 
+            masking_policy: full_encrypt_pii 
+
+      - name: patient_postal_code
+        description: "{{ doc('patient_postal_code')}}"
+        meta: 
+            masking_policy: full_encrypt_pii 
+
+      - name: patient_city
+        description: "{{ doc('patient_city')}}"
+        meta: 
+            masking_policy: full_encrypt_pii 
+
+      - name: patient_address
+        description: "{{ doc('patient_address')}}"
+        meta: 
+            masking_policy: full_encrypt_pii 
