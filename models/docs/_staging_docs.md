@@ -18,14 +18,6 @@ TODO
 TODO
 {% enddocs %}
 
-{% docs condition_id %}
-TODO
-{% enddocs %}
-
-{% docs procedure_id %}
-TODO
-{% enddocs %}
-
 {% docs encounters_started_at %}
 The end datatime for each encounter record
 {% enddocs %}

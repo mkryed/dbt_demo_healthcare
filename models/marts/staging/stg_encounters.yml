@@ -12,10 +12,6 @@ models:
         description: '{{ doc("patient_id") }}'
       - name: organization_id
         description: '{{ doc("organization_id") }}'
-      - name: condition_id
-        description: '{{ doc("condition_id") }}'
-      - name: procedure_id
-        description: '{{ doc("procedure_id") }}'
       - name: started_at
         description: '{{ doc("encounters_started_at") }}'
       - name: ended_at
