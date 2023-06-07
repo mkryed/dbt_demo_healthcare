@@ -6,8 +6,6 @@ The hospitalized patient records
 
 # Column-Level Descriptions
 
-## Encounters table Descriptions
-
 {% docs encounters_id %}
 Primary Key for encounters records
 {% enddocs %}
