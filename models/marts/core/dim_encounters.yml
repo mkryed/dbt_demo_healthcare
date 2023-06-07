@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: dim_encounters
+    description: '{{ doc("stg_encounters") }}'
+    columns:
+      - name: encounters_id
+        description: '{{ doc("encounters_id") }}'
+        tests:
+          - not_null
+          - unique
+      - name: patient_id
+        description: '{{ doc("patient_id") }}'
+      - name: organization_id
+        description: '{{ doc("organization_id") }}'
+      - name: started_at
+        description: '{{ doc("encounters_started_at") }}'
+      - name: ended_at
+        description: '{{ doc("encounters_ended_at") }}'
+      - name: encounters_duration_minutes
+        description: '{{ doc("encounters_duration_minutes") }}'
+      - name: total_encounters_by_patient_and_organization
+        description: '{{ doc("total_encounters_by_patient_and_organization") }}'
