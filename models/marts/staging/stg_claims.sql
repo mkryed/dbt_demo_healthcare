@@ -15,8 +15,10 @@ final as (
         patient.patientId as patient_id, 
         procedure[SAFE_OFFSET(0)].procedure.reference.procedureId as procedure_id,
 
-        -- values
+        -- dimensions
         status as claim_status,
+
+        -- measures
         total.value as claim_total_value
 
     from src_claims 
