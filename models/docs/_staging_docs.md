@@ -3,49 +3,50 @@ Staging table that defines patient details such as addresses and names.
 {% enddocs %}
 
 {% docs patient_id %}
-TODO
+An identifier for this patient.
 {% enddocs %}
 
 {% docs patient_gender %}
-TODO
+male | female | other | unknown
+Binding: AdministrativeGender (Required)
 {% enddocs %}
 
 {% docs patient_birth_date %}
-TODO
+The date of birth for the individual
 {% enddocs %}
 
 {% docs patient_last_name %}
-TODO
+A last name associated with the patient
 {% enddocs %}
 
 {% docs patient_first_name %}
-TODO
+A first name (or given name) associated with the patient
 {% enddocs %}
 
 {% docs name_in_use %}
-TODO
+official or maiden
 {% enddocs %}
 
 {% docs deceased_at %}
-TODO
+Indicates if the individual is deceased or not and the timestamp of when it happened.
 {% enddocs %}
 
 {% docs patient_country %}
-TODO
+The country of residence of this patient.
 {% enddocs %}
 
 {% docs patient_state %}
-TODO
+The state of residence of this patient.
 {% enddocs %}
 
 {% docs patient_postal_code %}
-TODO
+Postal code associated with this patient.
 {% enddocs %}
 
 {% docs patient_city %}
-TODO
+The city of residence of this patient.
 {% enddocs %}
 
 {% docs patient_address %}
-TODO
+An address for the individual. Patient may have multiple addresses with different uses or applicable periods.
 {% enddocs %}
