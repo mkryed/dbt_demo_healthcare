@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_conditions
+    description: '{{ doc("stg_conditions") }}'
+    columns:
+      - name: condition_id
+        description: '{{ doc("condition_id") }}'
+        tests:
+          - not_null
+          - unique
+      - name: patient_id
+        description: '{{ doc("patient_id") }}'
+      - name: condition_code
+        description: '{{ doc("condition_code") }}'
+      - name: condition_display
+        description: '{{ doc("condition_display") }}'
+      - name: condition_text
+        description: '{{ doc("condition_text") }}'
+      - name: condition_onset_at
+        description: '{{ doc("condition_onset_at") }}'
+      - name: condition_abatement_at
+        description: '{{ doc("condition_abatement_at") }}'
