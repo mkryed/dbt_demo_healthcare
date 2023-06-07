@@ -1,0 +1,28 @@
+models:
+  - name: stg_procedures
+    description: "{{ doc('stg_procedures') }}"
+  
+    columns:
+      - name: procedure_id
+        description: "{{ doc('procedure_id') }}"
+        tests:
+          - unique
+          - not_null
+
+      - name: encounter_id
+        description: "{{ doc('encounter_id') }}"
+
+      - name: condition_id
+        description: "{{ doc('condition_id') }}"
+
+      - name: patient_id
+        description: "{{ doc('patient_id') }}"
+
+      - name: procedure_started_at
+        description: "{{ doc('procedure_started_at') }}"
+
+      - name: procedure_ended_at
+        description: "{{ doc('procedure_ended_at') }}"
+
+      - name: procedure_code
+        description: "{{ doc('procedure_code') }}"
