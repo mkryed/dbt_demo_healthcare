@@ -12,20 +12,20 @@ The hospitalized patient records
 Primary Key for encounters records
 {% enddocs %}
 
-{% docs encounters_patient_id %}
-Foreign key that connects to patients table
+{% docs patient_id %}
+TODO
 {% enddocs %}
 
-{% docs encounters_organization_id %}
-Foreign key that connects to organizations table
+{% docs organization_id %}
+TODO
 {% enddocs %}
 
-{% docs encounters_condition_id %}
-Foreign key that connects to conditions table
+{% docs condition_id %}
+TODO
 {% enddocs %}
 
-{% docs encounters_procedure_id %}
-Foreign key that connects to procedures table
+{% docs procedure_id %}
+TODO
 {% enddocs %}
 
 {% docs encounters_started_at %}

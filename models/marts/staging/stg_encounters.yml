@@ -9,13 +9,13 @@ models:
           - not_null
           - unique
       - name: patient_id
-        description: '{{ doc("encounters_patient_id") }}'
+        description: '{{ doc("patient_id") }}'
       - name: organization_id
-        description: '{{ doc("encounters_organization_id") }}'
+        description: '{{ doc("organization_id") }}'
       - name: condition_id
-        description: '{{ doc("encounters_condition_id") }}'
+        description: '{{ doc("condition_id") }}'
       - name: procedure_id
-        description: '{{ doc("encounters_procedure_id") }}'
+        description: '{{ doc("procedure_id") }}'
       - name: started_at
         description: '{{ doc("encounters_started_at") }}'
       - name: ended_at
