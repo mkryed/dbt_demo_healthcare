@@ -1,15 +1,16 @@
 # Model-Level Descriptions
 {% docs stg_organizations %}
-Healthcare organization details
+A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
+source: https://www.hl7.org/fhir/organization.html
 {% enddocs %}
 
-#column- Level Descriptions
+# Column-Level Descriptions
 {% docs organization_id %}
- A unique identifier for the organization.
+A unique identifier for the organization.
 {% enddocs %}
 
 {% docs organization_name %}
-The name of the organization.
+The name of the organization
 {% enddocs %}
 
 {% docs organization_type %}
@@ -32,6 +33,6 @@ State of the organization
 Country of the organization
 {% enddocs %}
 
-{% docs organization_postalcode %}
+{% docs organization_postal_code %}
 Postal code of the organization
 {% enddocs %}

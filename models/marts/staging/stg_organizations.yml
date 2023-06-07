@@ -6,6 +6,9 @@ models:
     columns:
         - name: organization_id
           description: "{{ doc('organization_id') }}"
+          tests:
+          - unique
+          - not_null
         - name: organization_name
           description: "{{ doc('organization_name') }}"
         - name: organization_type
@@ -18,5 +21,5 @@ models:
           description: "{{ doc('organization_state') }}"
         - name: organization_country
           description: "{{ doc('organization_country') }}"
-        - name: organization_postalcode
-          description: "{{ doc('organization_postalcode') }}"
+        - name: organization_postal_code
+          description: "{{ doc('organization_postal_code') }}"
