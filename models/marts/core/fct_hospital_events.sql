@@ -18,10 +18,10 @@ encounters_details as (
         organization_id,
         encounter_started_at,
         encounter_ended_at,
-        timestamp_diff(timestamp(encounter_ended_at),timestamp(encounter_started_at), minute)
-as encounter_duration_minutes,
-        count(*) over (partition by patient_id, organization_id)
-as encounter_total_by_patient_and_organization
+        timestamp_diff(timestamp(encounter_ended_at),timestamp(encounter_started_at), minute) as
+encounter_duration_minutes,
+        count(*) over (partition by patient_id, organization_id) as
+encounter_total_by_patient_and_organization
 
 
     from encounters
@@ -37,8 +37,8 @@ procedures_details as (
         procedure_started_at,
         procedure_ended_at,
         count(*) over (partition by procedure_code) as procedure_total,
-        timestamp_diff(timestamp(procedure_ended_at),
-timestamp(procedure_started_at), minute) as procedure_duration_minutes
+        timestamp_diff(timestamp(procedure_ended_at), timestamp(procedure_started_at), minute) as
+procedure_duration_minutes
 
 
     from procedures
