@@ -18,7 +18,7 @@ models:
         description: "{{ doc('condition_id') }}"
 
       - name: medication_request_id
-        description: "{{ doc('medication_request_id') }}"
+        description: "{{ doc('claim_medication_request_id') }}"
 
       - name: patient_id
         description: "{{ doc('patient_id') }}"
