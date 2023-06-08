@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: fct_hospital_events
+    description: '{{ doc("fct_hospital_events") }}'
+    columns:
+      - name: hospital_sk
+        description: '{{ doc("hospital_sk") }}'
+        tests:
+          - not_null
+          - unique
+      - name: procedure_id
+        description: '{{ doc("procedure_id") }}'
+      - name: condition_id
+        description: '{{ doc("condition_id") }}'
+      - name: encounter_id
+        description: '{{ doc("encounter_id") }}'
+      - name: patient_id
+        description: '{{ doc("patient_id") }}'
+        tests:
+          - not_null
+      - name: organization_id
+        description: '{{ doc("organization_id") }}'
+      - name: procedure_name
+        description: '{{ doc("procedure_code") }}'
+      - name: procedure_started_at
+        description: '{{ doc("procedure_started_at") }}'
+      - name: procedure_ended_at
+        description: '{{ doc("procedure_ended_at") }}'
+      - name: encounter_started_at
+        description: '{{ doc("encounter_started_at") }}'
+      - name: encounter_ended_at
+        description: '{{ doc("encounter_ended_at") }}'
+      - name: encounter_duration_minutes
+        description: '{{ doc("encounter_duration_minutes") }}'
+      - name: encounter_total_by_patient_and_organization
+        description: '{{ doc("encounter_total_by_patient_and_organization") }}'
+      - name: procedure_duration_minutes
+        description: '{{ doc("procedure_duration_minutes") }}'
+      - name: procedure_total_by_procedure_name
+        description: '{{ doc("procedure_total_by_procedure_name") }}'
