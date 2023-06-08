@@ -25,24 +25,12 @@ source: https://www.hl7.org/fhir/claim.html
 The unique identifier of the claim.
 {% enddocs %}
 
-{% docs organization_id %}
-The unique identifier of the organization.
-{% enddocs %}
-
 {% docs encounter_id %}
 The unique identifier of the encounter.
 {% enddocs %}
 
-{% docs condition_id %}
-The unique identifier of the condition.
-{% enddocs %}
-
 {% docs medication_request_id %}
 The unique identifier of the medication request.
-{% enddocs %}
-
-{% docs patient_id %}
-The unique identifier of the patient.
 {% enddocs %}
 
 {% docs procedure_id %}

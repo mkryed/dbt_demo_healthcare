@@ -22,10 +22,6 @@ which remain constant as the resource is updated and propagates from server to s
 Primary Key for encounters records
 {% enddocs %}
 
-{% docs patient_id %}
-TODO
-{% enddocs %}
-
 {% docs organization_id %}
 TODO
 {% enddocs %}

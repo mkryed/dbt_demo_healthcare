@@ -5,9 +5,6 @@ source: https://www.hl7.org/fhir/organization.html
 {% enddocs %}
 
 # Column-Level Descriptions
-{% docs organization_id %}
-A unique identifier for the organization.
-{% enddocs %}
 
 {% docs organization_name %}
 The name of the organization
