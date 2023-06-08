@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: dim_organizations
-    description: TODO
+    description: "{{ doc('stg_organizations') }}"
     columns:
         - name: organization_id
           description: "{{ doc('organization_id') }}"
