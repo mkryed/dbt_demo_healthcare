@@ -1,6 +1,6 @@
 # Model-level descriptions
 {% docs fct_hospital_events %}
-The fct hospital events is a combination of the encountered events and
+The fct hospital events is a combination of the encounters and
 the procedures associated with it. Not every encounter has a procedure.
 {% enddocs %}
 
