@@ -18,7 +18,7 @@ encounters_details as (
         organization_id,
         encounter_started_at,
         encounter_ended_at,
-        timestamp_diff(timestamp(encounter_ended_at),timestamp(encounter_started_at), minute) as
+        timestamp_diff(timestamp(encounter_ended_at), timestamp(encounter_started_at), minute) as
 encounter_duration_minutes,
         count(*) over (partition by patient_id, organization_id) as
 encounter_total_by_patient_and_organization
