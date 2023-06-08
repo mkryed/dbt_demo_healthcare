@@ -48,7 +48,9 @@ procedure_duration_minutes
 fct_details as (
 
     select
-        row_number() over (order by encounters_details.encounter_started_at) as hospital_sk,
+        {{ dbt_utils.generate_surrogate_key(
+            ['encounters_details.encounter_id', 'procedures_details.procedure_id']
+        ) }} as hospital_sk,
         procedures_details.procedure_id as procedure_id,
         procedures_details.condition_id as condition_id,
         encounters_details.encounter_id as encounter_id,
