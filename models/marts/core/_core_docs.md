@@ -9,7 +9,7 @@ the procedures associated with it. Not every encounter has a procedure.
 ## fct_hospital_events_
 
 {% docs encounter_duration_minutes %}
-The difference between the encounter_started_at and the encounter_ended_at
+The duration of the encounter, calculated as the difference between encounter_started_at and encounter_ended_at.
 {% enddocs %}
 
 {% docs procedure_duration_minutes %}
