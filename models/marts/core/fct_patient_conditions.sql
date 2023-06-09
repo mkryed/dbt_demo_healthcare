@@ -19,8 +19,7 @@ final as (
         conditions.patient_id,
         conditions.condition_code,
         -- details
-        conditions.condition_display,
-        conditions.condition_text,
+        conditions.condition_type,
         patients.patient_last_name,
         patients.patient_first_name,
         patients.patient_name_in_use,
@@ -33,7 +32,8 @@ final as (
         patients.patient_birth_date,
         patients.patient_deceased_at,
         conditions.condition_onset_at,
-        conditions.condition_abatement_at
+        conditions.condition_abatement_at,
+        ifnull(date_diff( patients.patient_deceased_at, patients.patient_birth_date, year ), null ) as patient_age_at_death
 
     from conditions
     left join patients
