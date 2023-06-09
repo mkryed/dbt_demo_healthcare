@@ -4,8 +4,8 @@ models:
   - name: fct_patient_conditions
     description: "{{ doc('fct_patient_conditions') }}"
     columns:
-      - name: condition_id
-        description: "{{ doc('condition_id') }}"
+      - name: patient_conditions_key
+        description: "{{ doc('patient_conditions_key') }}"
         tests:
           - unique
           - not_null
