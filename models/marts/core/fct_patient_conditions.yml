@@ -6,6 +6,12 @@ models:
     columns:
       - name: condition_id
         description: "{{ doc('condition_id') }}"
+        tests:
+          - unique
+          - not_null
+
+      - name: condition_id
+        description: "{{ doc('condition_id') }}"
 
       - name: patient_id
         description: "{{ doc('patient_id') }}"

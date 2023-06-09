@@ -14,6 +14,7 @@ final as (
 
     select 
         -- keys
+        {{ dbt_utils.generate_surrogate_key(['conditions.condition_id','conditions.patient_id']) }} as patient_conditions_key,
         conditions.condition_id,
         conditions.patient_id,
         conditions.condition_code,
