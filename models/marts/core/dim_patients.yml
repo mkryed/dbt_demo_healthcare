@@ -60,3 +60,9 @@ models:
 
       - name: total_conditions_on_first_visit
         description: The total number of conditions recorded for a patient during the first visit.
+
+      - name: age
+        description: The current age of the patients.
+
+      - name: age_when_deceased
+        description: The age of the patients when they passed away.
