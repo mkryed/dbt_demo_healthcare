@@ -5,7 +5,7 @@ models:
     description: '{{ doc("fct_hospital_events") }}'
     columns:
       - name: hospital_sk
-        description: '{{ doc("hospital_sk") }}'
+        description: A primary key of the fct_hospital_events table, composed of `encounter_id` and `procedure_id`.
         tests:
           - not_null
           - unique
