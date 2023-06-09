@@ -21,7 +21,7 @@ models:
           - not_null
       - name: organization_id
         description: '{{ doc("organization_id") }}'
-      - name: procedure_name
+      - name: procedure_code
         description: '{{ doc("procedure_code") }}'
       - name: procedure_started_at
         description: '{{ doc("procedure_started_at") }}'
@@ -33,9 +33,5 @@ models:
         description: '{{ doc("encounter_ended_at") }}'
       - name: encounter_duration_minutes
         description: '{{ doc("encounter_duration_minutes") }}'
-      - name: encounter_total_by_patient_and_organization
-        description: '{{ doc("encounter_total_by_patient_and_organization") }}'
       - name: procedure_duration_minutes
         description: '{{ doc("procedure_duration_minutes") }}'
-      - name: procedure_total_by_procedure_name
-        description: '{{ doc("procedure_total_by_procedure_name") }}'
