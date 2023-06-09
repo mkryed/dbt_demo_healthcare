@@ -31,3 +31,9 @@ models:
 
       - name: claim_total_value
         description: "{{ doc('claim_total_value') }}"
+
+      - name: billable_period_started_at
+        description: "{{ doc('claim_billable_period_started_at') }}"
+
+      - name: billable_period_ended_at
+        description: "{{ doc('claim_billable_period_ended_at') }}"
