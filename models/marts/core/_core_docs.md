@@ -13,5 +13,5 @@ The difference between the encounter_started_at and the encounter_ended_at
 {% enddocs %}
 
 {% docs procedure_duration_minutes %}
-The difference between the procedure_started_at and the procedure_ended_at
+The duration of the encounter, calculated as the difference between procedure_started_at and procedure_ended_at.
 {% enddocs %}
