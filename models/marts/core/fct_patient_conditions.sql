@@ -33,7 +33,7 @@ final as (
         patients.patient_deceased_at,
         conditions.condition_onset_at,
         conditions.condition_abatement_at,
-        ifnull(date_diff( patients.patient_deceased_at, patients.patient_birth_date, year ), null ) as patient_age_at_death
+        ifnull(date_diff( date(patients.patient_deceased_at), patients.patient_birth_date, year ), null ) as patient_age_at_death
 
     from conditions
     left join patients

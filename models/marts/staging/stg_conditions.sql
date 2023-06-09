@@ -18,8 +18,8 @@ renamed as (
         code.text as condition_type,
 
         -- timestamps
-        onset.dateTime as condition_onset_at,
-        abatement.dateTime as condition_abatement_at
+        timestamp(onset.dateTime) as condition_onset_at,
+        timestamp(abatement.dateTime) as condition_abatement_at
 
     from src
 )

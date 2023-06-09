@@ -21,7 +21,7 @@ renamed as (
         address[SAFE_OFFSET(0)].line as patient_address,
         -- timestamps
         parse_date('%Y-%m-%d', birthDate) as patient_birth_date,
-        date(parse_timestamp('%Y-%m-%dT%H:%M:%S%Ez', deceased.dateTime)) as patient_deceased_at
+        timestamp(deceased.dateTime) as patient_deceased_at
     
     from src_patients
     where name[SAFE_OFFSET(0)].use = 'official'
