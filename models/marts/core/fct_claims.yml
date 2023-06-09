@@ -1,0 +1,29 @@
+models:
+  - name: fct_claims
+    description: "{{ doc('stg_claims') }}"
+    columns:
+      - name: claim_id
+        description: "{{ doc('claim_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: organization_id
+        description: "{{ doc('organization_id') }}"
+      - name: encounter_id
+        description: "{{ doc('encounter_id') }}"
+      - name: condition_id
+        description: "{{ doc('condition_id') }}"
+      - name: medication_request_id
+        description: "{{ doc('claim_medication_request_id') }}"
+      - name: patient_id
+        description: "{{ doc('patient_id') }}"
+      - name: procedure_id
+        description: "{{ doc('procedure_id') }}"
+      - name: claim_status
+        description: "{{ doc('claim_status') }}"
+      - name: claim_total_value
+        description: "{{ doc('claim_total_value') }}"
+      - name: billable_period_started_at
+        description: "{{ doc('claim_billable_period_started_at') }}"
+      - name: billable_period_ended_at
+        description: "{{ doc('claim_billable_period_ended_at') }}"
