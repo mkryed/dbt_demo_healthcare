@@ -8,10 +8,6 @@ the procedures associated with it. Not every encounter has a procedure.
 
 ## fct_hospital_events_
 
-{% docs hospital_sk %}
-A primary key of the fct_hospital_events table.
-{% enddocs %}
-
 {% docs encounter_duration_minutes %}
 The difference between the encounter_started_at and the encounter_ended_at
 {% enddocs %}
