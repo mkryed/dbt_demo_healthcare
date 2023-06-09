@@ -23,6 +23,8 @@ models:
         description: "{{ doc('claim_status') }}"
       - name: claim_total_value
         description: "{{ doc('claim_total_value') }}"
+      - name: billable_period_duration_minutes
+        description: "{{ doc('claim_billable_period_duration_minutes')}}"
       - name: billable_period_started_at
         description: "{{ doc('claim_billable_period_started_at') }}"
       - name: billable_period_ended_at
