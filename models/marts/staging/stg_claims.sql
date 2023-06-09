@@ -19,7 +19,11 @@ final as (
         status as claim_status,
 
         -- measures
-        total.value as claim_total_value
+        total.value as claim_total_value,
+
+        -- timestamps
+        timestamp(billablePeriod.start) as billable_period_started_at,
+        timestamp(billablePeriod.end) as billable_period_ended_at
 
     from src_claims
 )

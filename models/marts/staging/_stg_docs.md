@@ -75,6 +75,14 @@ The total claim cost (e.g. item cost, tax, scaling factor, etc.).
 The unique identifier of the medication request.
 {% enddocs %}
 
+{% docs claim_billable_period_started_at %}
+Starting timestamp of the period for which charges are being submitted.
+{% enddocs %}
+
+{% docs claim_billable_period_ended_at %}
+Ending timestamp of the period for which charges are being submitted.
+{% enddocs %}
+
 ## Conditions
 
 {% docs condition_id %}
