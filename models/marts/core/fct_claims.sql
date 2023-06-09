@@ -23,6 +23,7 @@ final as (
 
         -- measures
         claim_total_value,
+        timestamp_diff(billable_period_ended_at,billable_period_started_at, minute) as billable_period_duration_minutes,
 
         -- timestamps
         billable_period_started_at,
