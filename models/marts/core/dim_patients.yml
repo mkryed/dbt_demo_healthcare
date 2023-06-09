@@ -40,17 +40,23 @@ models:
       - name: patient_address
         description: "{{ doc('patient_address') }}"
 
-      - name: first_condition_text
+      - name: first_visit_condition_text
         description: "{{ doc('condition_text') }}"
 
       - name: first_condition_date
-        description: The date when a first condition was assigned to a patient.
+        description: The date when conditions was first assigned to a patient.
 
       - name: first_encounter_date
-        description: The first encounter date for a patient.
+        description: The first encounter date of a patient.
+
+      - name: last_encounter_date
+        description: The last encounter date of a patient.
 
       - name: total_encounters
         description: The total number of encounters recorded for a patient.
 
-      - name: total_conditions
-        description: The total number of conditions recorded for a patient.
+      - name: total_count_of_unique_conditions
+        description: The total lifetime count of unique conditions for each patient.
+
+      - name: total_conditions_on_first_visit
+        description: The total number of conditions recorded for a patient during the first visit.

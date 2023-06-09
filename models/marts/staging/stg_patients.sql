@@ -6,7 +6,7 @@ with src_patients as (
 
 renamed as (
 
-    select 
+    select
         -- primary key
         id as patient_id,
         -- details
@@ -18,11 +18,11 @@ renamed as (
         address[SAFE_OFFSET(0)].state as patient_state,
         address[SAFE_OFFSET(0)].postalCode as patient_postal_code,
         address[SAFE_OFFSET(0)].city as patient_city,
-        address[SAFE_OFFSET(0)].line as patient_address,
+        address[SAFE_OFFSET(0)].line[0] as patient_address,
         -- timestamps
-        birthDate as patient_birth_date,
-        deceased.dateTime as patient_deceased_at
-    
+        parse_date('%Y-%m-%d', birthDate) as patient_birth_date,
+        timestamp(deceased.dateTime) as patient_deceased_at
+
     from src_patients
     where name[SAFE_OFFSET(0)].use = 'official'
 
@@ -30,7 +30,7 @@ renamed as (
 
 final as (
 
-    select 
+    select
         -- primary key
         patient_id,
         -- details
