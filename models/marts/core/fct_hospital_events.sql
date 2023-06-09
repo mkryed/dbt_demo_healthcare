@@ -16,12 +16,12 @@ final as (
         -- primary key
         {{ dbt_utils.generate_surrogate_key(
             ['encounters.encounter_id', 'procedures.procedure_id']
-            ) }} as hospital_events_sk,
+            ) }} as hospital_event_sk,
 
         -- foreign key
+        encounters.encounter_id,
         procedures.procedure_id,
         procedures.condition_id,
-        encounters.encounter_id,
         encounters.patient_id,
         encounters.organization_id,
 
