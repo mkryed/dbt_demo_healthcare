@@ -20,7 +20,7 @@ renamed as (
         address[SAFE_OFFSET(0)].city as patient_city,
         address[SAFE_OFFSET(0)].line[0] as patient_address,
         -- timestamps
-        parse_date('%Y-%m-%d', birthDate) as patient_birth_date,
+        date(birthDate) as patient_birth_date,
         timestamp(deceased.dateTime) as patient_deceased_at
 
     from src_patients
