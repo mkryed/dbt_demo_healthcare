@@ -12,8 +12,8 @@ final as (
         serviceProvider.organizationId as organization_id,
 
         -- dates & timestamps
-        period.start as encounter_started_at,
-        period.end as encounter_ended_at
+        timestamp(period.start) as encounter_started_at,
+        timestamp(period.end) as encounter_ended_at
 
     from src_encounters
 )

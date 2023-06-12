@@ -13,8 +13,8 @@ final as (
         subject.patientId as patient_id,
 
         -- timestamps
-        performed.period.start as procedure_started_at,
-        performed.period.end as procedure_ended_at,
+        timestamp(performed.period.start) as procedure_started_at,
+        timestamp(performed.period.end) as procedure_ended_at,
 
         -- dimensions
         code.text as procedure_code
