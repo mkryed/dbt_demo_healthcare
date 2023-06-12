@@ -88,7 +88,7 @@ final as (
         case when patients.patient_deceased_at is null
             then {{ age_general('patients.patient_birth_date') }} else null
             end as age,
-        {{ age_when_deceased('patients.patient_deceased_at', 'patients.patient_birth_date') }} as age_when_deceased
+        {{ age_general('patients.patient_birth_date', 'patients.patient_deceased_at') }} as age_when_deceased
 
     from patients
     left join conditions_history
