@@ -40,7 +40,7 @@ the conditions are combined into one line (string) but separated (delimited) by 
 {% enddocs %}
 
 {% docs total_count_of_unique_conditions %}
-The total lifetime count of unique conditions for each patient.
+The total count of unique conditions for each patient.
 {% enddocs %}
 
 {% docs total_conditions_on_first_visit %}
