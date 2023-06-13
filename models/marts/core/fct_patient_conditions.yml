@@ -12,9 +12,14 @@ models:
 
       - name: condition_id
         description: "{{ doc('condition_id') }}"
+        tests:
+          - unique
+          - not_null
 
       - name: patient_id
         description: "{{ doc('patient_id') }}"
+        tests:
+          - not_null
 
       - name: condition_code
         description: "{{ doc('condition_code') }}"
@@ -60,3 +65,6 @@ models:
 
       - name: condition_abatement_at
         description: "{{ doc('condition_abatement_at') }}"
+
+      - name: patient_age_at_death
+        description: "{{ doc('patient_age_at_death') }}"
