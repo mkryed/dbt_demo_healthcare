@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: dim_patients
+    description: "{{ doc('stg_patients') }}"
+    columns:
+      - name: patient_id
+        description: "{{ doc('patient_id') }}"
+        tests:
+          - unique
+          - not_null
+
+      - name: patient_gender
+        description: "{{ doc('patient_gender') }}"
+
+      - name: patient_birth_date
+        description: "{{ doc('patient_birth_date') }}"
+
+      - name: patient_last_name
+        description: "{{ doc('patient_last_name') }}"
+
+      - name: patient_first_name
+        description: "{{ doc('patient_first_name') }}"
+
+      - name: patient_deceased_at
+        description: "{{ doc('patient_deceased_at') }}"
+
+      - name: patient_country
+        description: "{{ doc('patient_country') }}"
+
+      - name: patient_state
+        description: "{{ doc('patient_state') }}"
+
+      - name: patient_postal_code
+        description: "{{ doc('patient_postal_code') }}"
+
+      - name: patient_city
+        description: "{{ doc('patient_city') }}"
+
+      - name: patient_address
+        description: "{{ doc('patient_address') }}"
+
+      - name: first_visit_condition_text
+        description: "{{ doc('first_visit_condition_text') }}"
+
+      - name: first_condition_date
+        description: "{{ doc('first_condition_date') }}"
+
+      - name: first_encounter_date
+        description: "{{ doc('first_encounter_date') }}"
+
+      - name: last_encounter_date
+        description: "{{ doc('last_encounter_date') }}"
+
+      - name: total_encounters
+        description: "{{ doc('total_encounters') }}"
+
+      - name: total_count_of_unique_conditions
+        description: "{{ doc('total_count_of_unique_conditions') }}"
+
+      - name: total_conditions_on_first_visit
+        description: "{{ doc('total_conditions_on_first_visit') }}"
+
+      - name: age
+        description: "{{ doc('age') }}"
+
+      - name: age_when_deceased
+        description: "{{ doc('age_when_deceased') }}"
