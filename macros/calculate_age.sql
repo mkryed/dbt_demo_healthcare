@@ -1,4 +1,4 @@
-{% macro age_general(date_1, date_2 = none) %}
+{% macro calculate_age(date_1, date_2 = none) %}
 
 {% if date_2 == none %}
     date_diff(current_date(), date({{ date_1 }}), year) -

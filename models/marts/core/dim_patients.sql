@@ -86,9 +86,9 @@ final as (
         conditions_history.total_count_of_unique_conditions,
         conditions_history.total_conditions_on_first_visit,
         case when patients.patient_deceased_at is null
-            then {{ age_general('patients.patient_birth_date') }} else null
+            then {{ calculate_age('patients.patient_birth_date') }} else null
             end as age,
-        {{ age_general('patients.patient_birth_date', 'patients.patient_deceased_at') }} as age_when_deceased
+        {{ calculate_age('patients.patient_birth_date', 'patients.patient_deceased_at') }} as age_when_deceased
 
     from patients
     left join conditions_history

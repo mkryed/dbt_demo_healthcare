@@ -1,0 +1,20 @@
+version: 2
+
+macros:
+  - name: calculate_age
+    description: >
+      This macros calculates the accurate age in years based on a given date using the date_diff
+      function in BigQuery. The macros takes in two arguments date_1 and date_2. date_1 is the date of birth and by
+      default date_2 is current_date. Unless otherwise specified, the macros only calculates the current age when date_1
+      is provided. Upon providing date_2, the macros overrides the currrent_date and calculates the difference.
+      If only date_1 is provided, the current age is calculated. If date_1 and date_2 are provided, the age at death is
+      calculated.
+    arguments:
+      - name: date_1
+        type: string
+        description: This date represents the date of birth.
+      - name: date_2
+        type: string
+        description: >
+          By default, this argument is not provided, and it defaults to the current date. Overriding this
+          argument allows calculating the age of individuals at a specific date, such as deceased patients.
