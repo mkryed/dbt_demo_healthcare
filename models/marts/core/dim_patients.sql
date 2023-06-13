@@ -33,11 +33,7 @@ conditions_summary as (
 
     select
         patient_id,
-<<<<<<< HEAD
         condition_type as first_condition_type,
-=======
-        condition_type as first_condition_text,
->>>>>>> main
         min(date(condition_onset_at)) over (partition by patient_id) as first_condition_date,
         rank() over (partition by patient_id order by condition_onset_at) as rank_condition,
         count(distinct condition_code) over (partition by patient_id) as total_count_of_unique_conditions
