@@ -5,7 +5,7 @@ models:
     description: '{{ doc("fct_hospital_events") }}'
     columns:
       - name: hospital_event_sk
-        description: '{{ doc("hospital_event_sk")}}'
+        description: '{{ doc("hospital_event_sk") }}'
         tests:
           - not_null
           - unique
