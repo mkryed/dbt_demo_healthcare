@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_organizations
+    description: "{{ doc('stg_organizations') }}"
+    columns:
+      - name: organization_id
+        description: "{{ doc('organization_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: organization_name
+        description: "{{ doc('organization_name') }}"
+      - name: organization_type
+        description: "{{ doc('organization_type') }}"
+      - name: organization_address
+        description: "{{ doc('organization_address') }}"
+      - name: organization_city
+        description: "{{ doc('organization_city') }}"
+      - name: organization_state
+        description: "{{ doc('organization_state') }}"
+      - name: organization_country
+        description: "{{ doc('organization_country') }}"
+      - name: organization_postal_code
+        description: "{{ doc('organization_postal_code') }}"

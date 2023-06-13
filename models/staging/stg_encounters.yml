@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: stg_encounters
+    description: '{{ doc("stg_encounters") }}'
+    columns:
+      - name: encounter_id
+        description: '{{ doc("encounter_id") }}'
+        tests:
+          - not_null
+          - unique
+      - name: patient_id
+        description: '{{ doc("patient_id") }}'
+      - name: organization_id
+        description: '{{ doc("organization_id") }}'
+      - name: encounter_started_at
+        description: '{{ doc("encounter_started_at") }}'
+      - name: encounter_ended_at
+        description: '{{ doc("encounter_ended_at") }}'

@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_patients
+    description: "{{ doc('stg_patients') }}"
+    columns:
+      - name: patient_id
+        description: "{{ doc('patient_id') }}"
+        tests:
+          - unique
+          - not_null
+
+      - name: patient_gender
+        description: "{{ doc('patient_gender') }}"
+
+      - name: patient_birth_date
+        description: "{{ doc('patient_birth_date') }}"
+
+      - name: patient_last_name
+        description: "{{ doc('patient_last_name') }}"
+
+      - name: patient_first_name
+        description: "{{ doc('patient_first_name') }}"
+
+      - name: patient_name_in_use
+        description: "{{ doc('patient_name_in_use') }}"
+
+      - name: patient_deceased_at
+        description: "{{ doc('patient_deceased_at') }}"
+
+      - name: patient_country
+        description: "{{ doc('patient_country') }}"
+
+      - name: patient_state
+        description: "{{ doc('patient_state') }}"
+
+      - name: patient_postal_code
+        description: "{{ doc('patient_postal_code') }}"
+
+      - name: patient_city
+        description: "{{ doc('patient_city') }}"
+
+      - name: patient_address
+        description: "{{ doc('patient_address') }}"
