@@ -40,4 +40,4 @@ models:
 
     marts:
       # Default materialization is view unless it's prod
-      +materialized: "{{'table' if target.name=='prod' else 'view' }}"
+      +materialized: "{{ 'table' if target.name=='prod' else 'view' }}"
