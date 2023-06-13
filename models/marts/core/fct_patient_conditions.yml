@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: fct_patient_conditions
+    description: "{{ doc('fct_patient_conditions') }}"
+    columns:
+      - name: patient_conditions_key
+        description: "{{ doc('patient_conditions_key') }}"
+        tests:
+          - unique
+          - not_null
+
+      - name: condition_id
+        description: "{{ doc('condition_id') }}"
+        tests:
+          - unique
+          - not_null
+
+      - name: patient_id
+        description: "{{ doc('patient_id') }}"
+        tests:
+          - not_null
+
+      - name: condition_code
+        description: "{{ doc('condition_code') }}"
+
+      - name: condition_display
+        description: "{{ doc('condition_display') }}"
+
+      - name: condition_text
+        description: "{{ doc('condition_text') }}"
+
+      - name: patient_last_name
+        description: "{{ doc('patient_last_name') }}"
+
+      - name: patient_first_name
+        description: "{{ doc('patient_first_name') }}"
+
+      - name: patient_name_in_use
+        description: "{{ doc('patient_name_in_use') }}"
+
+      - name: patient_country
+        description: "{{ doc('patient_country') }}"
+
+      - name: patient_state
+        description: "{{ doc('patient_state') }}"
+
+      - name: patient_postal_code
+        description: "{{ doc('patient_postal_code') }}"
+
+      - name: patient_city
+        description: "{{ doc('patient_city') }}"
+
+      - name: patient_address
+        description: "{{ doc('patient_address') }}"
+
+      - name: patient_birth_date
+        description: "{{ doc('patient_birth_date') }}"
+
+      - name: patient_deceased_at
+        description: "{{ doc('patient_deceased_at') }}"
+
+      - name: condition_onset_at
+        description: "{{ doc('condition_onset_at') }}"
+
+      - name: condition_abatement_at
+        description: "{{ doc('condition_abatement_at') }}"
+
+      - name: patient_age_at_death
+        description: "{{ doc('patient_age_at_death') }}"

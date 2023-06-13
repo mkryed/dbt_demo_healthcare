@@ -1,4 +1,8 @@
 # Model-level descriptions
+{% docs fct_patient_conditions %}
+A fact table connecting patient data to conditions data.
+{% enddocs %}
+
 
 {% docs fct_hospital_events %}
 A combination of the encounters and the procedures associated with it.
@@ -66,4 +70,14 @@ The current age of the patients who are currently alive. Null represents patient
 
 {% docs age_when_deceased %}
 The age at which the patients passed away. Null represents patients who are still alive.
+{% enddocs %}
+
+## Patient conditions
+
+{% docs patient_conditions_key %}
+Unique surrogate key to the fct_patient_conditions table composed of condition_id and patient_id.
+{% enddocs %}
+
+{% docs patient_age_at_death %}
+Age of the patient at the time of death.
 {% enddocs %}
