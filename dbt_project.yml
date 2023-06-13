@@ -36,3 +36,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_demo_healthcare:
     # Config indicated by + and applies to all files under models/example/
+    marts:
+      core:
+      # Default materialization of marts models is tables
+        +materialized: table
+
+      staging:
+          # Default materialization of staging models is views
+        +materialized: view

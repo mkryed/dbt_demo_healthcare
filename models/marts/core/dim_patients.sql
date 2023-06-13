@@ -33,7 +33,7 @@ conditions_summary as (
 
     select
         patient_id,
-        condition_text as first_condition_text,
+        condition_type as first_condition_type,
         min(date(condition_onset_at)) over (partition by patient_id) as first_condition_date,
         rank() over (partition by patient_id order by condition_onset_at) as rank_condition,
         count(distinct condition_code) over (partition by patient_id) as total_count_of_unique_conditions
@@ -49,7 +49,7 @@ conditions_history as (
         patient_id,
         total_count_of_unique_conditions,
         first_condition_date,
-        string_agg(first_condition_text, ', ') as first_visit_condition_text,
+        string_agg(first_condition_type, ', ') as first_visit_condition_type,
         sum(case when rank_condition = 1 then 1 else 0 end) as total_conditions_on_first_visit
 
     from conditions_summary
@@ -72,7 +72,7 @@ final as (
         patients.patient_postal_code,
         patients.patient_city,
         patients.patient_address,
-        conditions_history.first_visit_condition_text,
+        conditions_history.first_visit_condition_type,
 
         -- dates & timestamp
         patients.patient_birth_date,
