@@ -10,7 +10,7 @@ config-version: 2
 profile: 'dbt_demo_healthcare'
 
 # Require dbt 1.0.0+
-require-dbt-version: [">=1.3.0", "<1.5.2"]
+require-dbt-version: [">=1.4.0", "<1.5.2"]
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -35,4 +35,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_demo_healthcare:
-    # Config indicated by + and applies to all files under models/example/
+    staging:
+      +materialized: view
+
+    marts:
+      # Default materialization is view unless it's prod
+      +materialized: "{{'table' if target.name=='prod' else 'view' }}"
