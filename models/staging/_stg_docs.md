@@ -97,7 +97,7 @@ Identification of the condition, problem or diagnosis.
 Description of the condition displayed.
 {% enddocs %}
 
-{% docs condition_text %}
+{% docs condition_type %}
 Alternative text for condition_display.
 {% enddocs %}
 
