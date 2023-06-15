@@ -19,6 +19,10 @@ models:
         description: "{{ doc('patient_id') }}"
       - name: procedure_id
         description: "{{ doc('procedure_id') }}"
+      - name: condition_type
+        description: '{{ doc("condition_type") }}'
+      - name: procedure_code
+        description: "{{ doc('procedure_code') }}"
       - name: claim_status
         description: "{{ doc('claim_status') }}"
       - name: claim_total_value

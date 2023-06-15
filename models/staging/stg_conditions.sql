@@ -15,6 +15,7 @@ renamed as (
 
         -- details
         code.coding[SAFE_OFFSET(0)].code as condition_code,
+        code.coding[SAFE_OFFSET(0)].display as condition_display,
         code.text as condition_type,
 
         -- timestamps

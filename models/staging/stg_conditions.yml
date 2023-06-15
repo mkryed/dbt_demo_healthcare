@@ -15,8 +15,8 @@ models:
         description: '{{ doc("condition_code") }}'
       - name: condition_display
         description: '{{ doc("condition_display") }}'
-      - name: condition_text
-        description: '{{ doc("condition_text") }}'
+      - name: condition_type
+        description: '{{ doc("condition_type") }}'
       - name: condition_onset_at
         description: '{{ doc("condition_onset_at") }}'
       - name: condition_abatement_at
