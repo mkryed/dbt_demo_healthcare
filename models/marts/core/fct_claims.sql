@@ -36,7 +36,7 @@ final as (
         claims.claim_status,
 
         -- measures
-       claims.claim_total_value,
+        claims.claim_total_value,
         timestamp_diff(claims.billable_period_ended_at, claims.billable_period_started_at, minute) as billable_period_duration_minutes,
 
         -- timestamps
