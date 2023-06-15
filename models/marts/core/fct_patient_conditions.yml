@@ -27,8 +27,8 @@ models:
       - name: condition_display
         description: "{{ doc('condition_display') }}"
 
-      - name: condition_text
-        description: "{{ doc('condition_text') }}"
+      - name: condition_type
+        description: "{{ doc('condition_type') }}"
 
       - name: patient_last_name
         description: "{{ doc('patient_last_name') }}"
